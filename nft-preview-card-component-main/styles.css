@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Noto+Sans:ital,wght@0,100;0,200;0,400;0,500;0,800;1,100;1,200;1,300;1,400;1,500;1,900&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&family=Work+Sans:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 18%, 55%);
+  --light: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-bg);
+  color: var(--light);
+  padding: 1.25rem;
+}
+
+.container {
+  padding: 1.25rem;
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.container .nft-img {
+  position: relative;
+}
+
+.container .nft-img div {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 255, 247, 0.438);
+  width: 100%;
+  height: calc(100% - 4px);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.container .nft-img div:hover {
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 1rem;
+  max-width: 100%;
+}
+
+.container .nft-img div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 0.5rem 0 2rem 0;
+}
+
+p {
+  font-weight: 300;
+  color: var(--line);
+  font-size: 14px;
+}
+
+.container h2 {
+  color: var(--light);
+}
+
+.container h2:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.container h2,
+ul {
+  margin: 1rem 1.5rem 0.5rem 0.5rem;
+}
+
+.container .icons p {
+  margin: 1rem 0 0.5rem 0.5rem;
+  font-size: 18px;
+}
+
+.container ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container ul li img {
+  margin-right: 0.5rem;
+}
+
+.container ul li:first-child {
+  color: var(--cyan);
+}
+
+.container ul li:last-child {
+  color: var(--line);
+}
+
+.container .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .footer p {
+  font-size: 18px;
+  margin-left: 0.5rem;
+}
+
+.container .footer span {
+  color: var(--light);
+}
+
+.container .footer span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.container .footer img {
+  width: 2.5rem;
+  border: 1px solid var(--light);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-left: -2.5rem;
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 1.2rem;
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .container .footer {
+    margin-left: 2rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    border-bottom: 1px solid var(--line);
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container .footer img {
+    margin-left: -1.5rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .container {
+    width: 350px;
+    margin: 0 auto 1rem;
+  }
+
+  .container .footer {
+    padding: 1rem 2rem 1rem 1.5rem;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 450px;
+    margin: 0 auto 1rem;
+  }
+
+  .container .footer {
+    padding: 1rem 2rem 1rem 0rem;
+  }
+}
